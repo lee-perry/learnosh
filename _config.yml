@@ -1,3 +1,11 @@
 name: Lee Perry | Developer
 markdown: kramdown
 permalink: /:categories/:year/:title/
+
+tipue_search:
+  include:
+    pages: true
+    collections: []
+tipue_search:
+  exclude:
+    files: [search.html,]
