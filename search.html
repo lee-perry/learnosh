@@ -1,0 +1,20 @@
+---
+layout: default
+title: Search Results
+tipue_search_active: true
+---
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Search Results</h1>
+    <p class="lead">{{page.url}}</p>
+  </div>
+</div>
+
+
+<div id="tipue_search_content"></div>
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
