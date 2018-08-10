@@ -6,6 +6,19 @@ layout: default
   <h2><strong>About Learnosh</strong></h2>
   <div class="row">
     <div class="col-sm-4"><img src="/images/learnosh.jpg" width="90%"></div>
+    <hr>
+    <div class="container">
+  <h2>Latest Thoughts</h2>
+                                                       <ul>
+    {% for post in site.posts offset:0 limit:5 %}
+   <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.categories | last }} - {{ post.date | date: "%d %B %Y" }}
+  </li>
+{% endfor %}
+                                                         <li><a href="https://learnosh.co.uk/articles/">View all articles</a></li>
+                                                       </ul>
+                                                       </div>
+
   <div class="col-sm-8">    
    <p>Through publishing information about health and safety and fire life safety management.  We aim to help build better health and safety practitioners, and to promote sensible, pragmatic and effective health and safety management by employers, and those organising public events.
      <div class="row">
