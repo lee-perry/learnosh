@@ -27,17 +27,15 @@ subtitle: Our study guide to the NEBOSH General Certificate
     {% assign sorted = site.pages | sort:"Unit" %}
       {% for page in sorted %}
     <p>{{page.Unit}}</p>
-        {% if page.module == 'NGC1' %}
-    <p>{{page.module}}</p>
-          {% if page.Element == '1' %}
-    <p>{{page.Element}}</p>
+        {% if page.module == 'NGC1' and page.Element == '1' %}
+    <p>{{page.module}}, {{page.Element}}</p>
     <tr>
       <th scope="row">1.1</th>
         <a class="btn btn-primary btn-lg" href="{{ page.url | remove: "index.html" }}" role="button" style="border: 5px solid white">{{page.title}}</a>&nbsp;
      </tr>
     <td>{{page.Unit}}</td>
     <td>
-      {% endif %}
+    
         {% endif %}
       {% endfor %}
     </td>
