@@ -23,13 +23,29 @@ subtitle: Our study guide to the NEBOSH General Certificate
     </tr>
   </thead>
   <tbody>
+    
+    {% assign sorted = site.pages | sort:"Unit" %}
+      {% for page in sorted %}
+        {% if page.module == 'NGC1' %}
+          {% if page.Element == '1' %}
+    <tr>
+      <th scope="row">1.1</th>
+        <a class="btn btn-primary btn-lg" href="{{ page.url | remove: "index.html" }}" role="button" style="border: 5px solid white">{{page.title}}</a>&nbsp;
+     </tr>
+    <td>{{page.Unit}}</td>
+    <td>
+      {% endif %}
+        {% endif %}
+      {% endfor %}
+    </td>
     <tr>
       <th scope="row">1.1</th>
       <td>The scope and nature of occupational health and safety</td>
       <td>v1.0</td>
       <td>August 2018</td>
     </tr>
-    </tr>
+
+    
   </tbody>
 </table>
 
