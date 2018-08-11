@@ -4,6 +4,7 @@
 				<div class="container">
   <br/>
 					{{page.excerpt}}
+					{% include banner.html %}
 			{{ content | remove_first:page.excerpt }}
 </div>
 			{% include footer.html %}
