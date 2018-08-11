@@ -5,7 +5,9 @@
   <br/>
 					
 			{{ content }}
-					{% include vimeoPlayer.html id=page.vimeoId %}
+					{% if vimeoId == True %}
+						{% include vimeoPlayer.html id=page.vimeoId %}
+					{% endif %}
 					
 </div>
 			{% include footer.html %}
