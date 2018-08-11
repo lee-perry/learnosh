@@ -26,6 +26,7 @@ subtitle: Our study guide to the NEBOSH General Certificate
     
     {% assign sorted = site.pages | sort:"Unit" %}
       {% for page in sorted %}
+    <p>{{page.Unit}}</p>
         {% if page.module == 'NGC1' %}
           {% if page.Element == '1' %}
     <tr>
