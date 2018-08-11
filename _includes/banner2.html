@@ -3,7 +3,7 @@
     <h1 style="padding-top:15%; text-align:center; color: white;"><strong>{{page.title}}</strong></h1>
         <hr style="background-color: white;">
             <div style="text-align:center;">	   
-                <h5 style="text-align:center; color: white;">{{ page.content | strip_html | truncatewords: 50 }}</h5>	  
+                <h5 style="text-align:center; color: white;">{{ page.content | strip_html | remove: "-" | remove: "_" | remove: "#" | truncatewords: 50 }}</h5>	  
             </div>	    
     </div>
 </div>
