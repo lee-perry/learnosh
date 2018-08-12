@@ -5,8 +5,8 @@
   <br/>
 					
 			{{ content }}
-					{ page.slug }
-					{ page.title }
+					{% page.slug %}
+					{% page.title %}
 					{% if page.vimeoId !=  %}
 						{% include vimeoPlayer.html id=page.vimeoId %}
 					{% endif %}
