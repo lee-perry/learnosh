@@ -1,13 +1,13 @@
 ---
 layout: default
-title: NGC1 | Element 1 - Management of Health & Safety
+title: NGC1 | Element 1 - Foundations in health and safety
 tipue_search_active: true
 ---
 
 <table class="table">
-  <thead class="thead-dark">
+  <thead class="thead-light">
     <tr>
-      <th scope="col" colspan="4">NGC1 | Element 1: Foundations in health and safety</th>
+      <th scope="col" colspan="4">Element 1: Foundations in health and safety</th>
     </tr>
   </thead>
   <tbody>
