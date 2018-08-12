@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NGC1
+title: NGC1 - Management of Health & Safety
 tipue_search_active: true
 ---
 
