@@ -11,7 +11,7 @@
      
         <input name="fields[name]" class="form-control" id="exampleFormControlInput1" type="text">Name</label>
         
-        <input name="options[slug]" class="form-control" id="exampleFormControlInput1" type="hidden" value="{{ page.slug }}">
+        <input name="options[slug]" class="form-control" id="exampleFormControlInput1" type="hidden" value="{{ page.title }}">
    
           
         <input name="fields[email]" class="form-control" id="exampleFormControlInput1" type="email">E-mail</label>
@@ -24,18 +24,18 @@
 <br/>
 </div>
 <div class="container">
-{% if site.data.comments[page.slug] %}
+{% if site.data.comments[page.title] %}
 
     <h3>
-    {% if site.data.comments[page.slug].size > 1 %}
-      {{ site.data.comments[page.slug] | size }}
+    {% if site.data.comments[page.title].size > 1 %}
+      {{ site.data.comments[page.title] | size }}
     {% endif %}
     Comments:
     </h3>
 
   <hr>
 
-  {% assign comments = site.data.comments[page.slug] | sort %}
+  {% assign comments = site.data.comments[page.title] | sort %}
 {% for comment in comments %}
   <div class="card">
   <div class="card-header">
