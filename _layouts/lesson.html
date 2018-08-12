@@ -2,9 +2,10 @@
 {% include menu.html %}
 {% include banner2.html %}
 				<div class="container">
-  <br/>{{ post.slug }} {{ post.title }}
+  <br/>
 					
 			{{ content }}
+					<p>{{ post.slug }} {{ post.title }}</p>
 					{% if page.vimeoId !=  %}
 						{% include vimeoPlayer.html id=page.vimeoId %}
 					{% endif %}
