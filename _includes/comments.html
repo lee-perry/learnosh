@@ -1,0 +1,52 @@
+<div class="container">
+<br/>
+<hr>
+<br/>
+<h3>Leave a Comment</h3>
+<form method="POST" action="https://api.staticman.net/v2/entry/lee-perry/learnosh/master/comments">
+  <div class="form-group">
+        <input name="options[redirect]" class="form-control" type="hidden" value="https://learnosh.co.uk">
+    
+    <!-- e.g. "2016-01-02-this-is-a-post" -->
+     
+        <input name="fields[name]" class="form-control" id="exampleFormControlInput1" type="text">Name</label>
+        
+        <input name="options[slug]" class="form-control" id="exampleFormControlInput1" type="hidden" value="{{ page.slug }}">
+   
+          
+        <input name="fields[email]" class="form-control" id="exampleFormControlInput1" type="email">E-mail</label>
+    
+        <textarea name="fields[message]" class="form-control"id="exampleFormControlInput1" ></textarea>Message</label>
+<br/>
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<br/>
+</div>
+<div class="container">
+{% if site.data.comments[page.slug] %}
+
+    <h3>
+    {% if site.data.comments[page.slug].size > 1 %}
+      {{ site.data.comments[page.slug] | size }}
+    {% endif %}
+    Comments:
+    </h3>
+
+  <hr>
+
+  {% assign comments = site.data.comments[page.slug] | sort %}
+{% for comment in comments %}
+  <div class="card">
+  <div class="card-header">
+    {{ comment[1].name }}
+    </div>
+    <div class="card-body">
+    <h6>{{ comment[1].date | date: "%B %d, %Y" }}</h6>
+    <p class="lead">{{ comment[1].message | markdownify }}</p>
+  </div>
+</div>
+<br/>
+ {% endfor %}
+{% endif %}
+</div>
